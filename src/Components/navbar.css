@@ -1,0 +1,184 @@
+.navbar {
+    position:fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ccc8c0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 1000;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-button {
+    position: absolute;
+    top: 19px;
+    left: 20px; /* Or adjust as needed */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    margin-left: 10vh;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin-right: 70px;  
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #007bff;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Rounded corners */
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #f8f8f8; /* Slight background color */
+    margin-left: -40%;
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 20px;
+    background-color: transparent; /* Make the background transparent */
+  }
+  
+  .search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 5px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .search-bar button:hover {
+    color: #007bff; /* Change color on hover */
+  }
+  
+  
+  .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 50px;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+  .off-screen-menu {
+    background-color: #ccc8c0;
+    height: 100vh;  /* Set full height */
+    width: 100%;
+    max-width: 450px; /* Determine how far the slide comes out */
+    position: fixed;
+    top: 0;
+    left: -450px; /* Initially off-screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: left 0.5s ease; /* Smooth sliding */
+  }
+  
+  .off-screen-menu.active {
+    left: 0; /* Slide in */
+  }
+  
+  nav{
+    padding: 1rem;
+    display: flex;
+    background-color: rgb(34, 37, 49);
+  }
+  .ham-menu{
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+  }
+  .ham-menu span{
+    height: 5px;
+    width: 100%;
+    background-color: #6F86FF;
+    border-radius: 26px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+  }
+  .ham-menu span:nth-child(1){
+    top: 25%;
+  }
+  .ham-menu span:nth-child(3){
+    top: 75%;
+  }
+  .ham-menu.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%); rotate: (45deg);
+  }
+  .ham-menu.active span:nth-child(2){
+    opacity: 0;
+  }
+  .ham-menu.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, -50%); rotate: (45deg);
+  }
+  
+  .off-screen-menu ul {
+    list-style: none; /* Remove bullets from the list */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    left: -20px; /* Move the text 20px to the left */
+  top: -20px; /* Move the text 20px upwards */
+}
+.off-screen-menu li{
+  margin: 30px 0; /* Adjust the vertical spacing between the menu items */
+    font-size: 2.2rem; /* Keep the current font size */
+    position: relative; /* This allows for absolute positioning of children elements */
+    left: -90px; /* Move the text 20px to the left */
+    top: -25vh; 
+}
+
+
+
+
+  

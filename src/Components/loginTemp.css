@@ -1,0 +1,223 @@
+/* Updates / Work that needs to be completed */
+
+body {
+    /* font-family: 'Arial', sans-serif; */
+    /* font-family: 'Inter', sans-serif; */
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+  .login-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-left: 50%;
+  }
+  
+  .login-title {
+    margin-bottom: 1.0rem;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #2e3a59; 
+  }
+  
+  .login-subtitle {
+    margin-bottom: 1.5rem;
+    color: #6b7280;
+  }
+  
+  /* Input group */
+  .input-group {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .login-input {
+    width: 90%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    font-size: 1.25rem;
+  }
+  
+  /* Remember me and forgot password */
+  .login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+  }
+  
+  .remember-me label {
+    margin-left: 0.5rem;
+    color: #4b5563;
+  }
+  
+  .forgot-password {
+    color: #1d4ed8;
+    text-decoration: none;
+    margin-right: -10px;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  /* Button styles */
+  .login-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1d4ed8;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #2563eb;
+    transform: scale(1.05); /* Slightly increase size to create the "pop" effect */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Divider */
+  .divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 0 1rem;
+  }
+  
+
+  .google-button {
+    height: 50px;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #f9fafb;
+    color: #111827;
+    border: 2px solid black;
+    border-radius: 30px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+  }
+  
+  .google-button:hover {
+    background-color: #e5e7eb;
+    transform: scale(1.05); /* Slightly increase size to create the "pop" effect */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  .apple-button:hover{
+    background-color: #e5e7eb;
+    transform: scale(1.05); /* Slightly increase size to create the "pop" effect */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  /* Signup link */
+  .signup-link {
+    margin-top: 1.5rem;
+    color: #6b7280;
+  }
+  
+  .signup-link a {
+    color: #1d4ed8;
+    text-decoration: none;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .login-container {
+      padding: 1.5rem;
+      width: 90%;
+    }
+  
+    .login-title {
+      font-size: 1.5rem;
+    }
+  
+    .login-input, .login-button, .google-button {
+      font-size: 0.875rem;
+      padding: 0.5rem;
+
+    }
+  }
+  
+  .google-button img {     
+    margin-right: 0.5rem;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+  }
+
+  .apple-button img{
+    margin-right: 0.5rem;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+  
+  }
+
+  .apple-button{
+    height: 50px;   
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #f9fafb;
+    color: #111827;
+    border: 2px solid black;
+    border-radius: 30px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+ 
