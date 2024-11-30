@@ -13,6 +13,7 @@ import SupplementsPage from "./Components/SupplementsPage"; // Import Skincare p
 import ToysPage from "./Components/ToysPage"; // Import Skincare page component
 import ContactUsPage from "./Components/ContactUsPage"; // Import Contact Us page component
 import CatalogPage from "./Components/catalog"; // Import Catalog page component
+import LoginPage from "./Components/login"; // Adjust the path as necessary based on your file structure
 
 import "./app.css"; // Import styles
 
@@ -36,6 +37,8 @@ function App() {
           {/* Redirect to home if route not found */}
           <Route path="/catalogPage" element={<CatalogPage />} />{" "}
           {/* Catalog page route */}
+          <Route path="/login" element={<LoginPage />} />{" "}
+          {/* Login page route */}
         </Routes>
       </div>
     </Router>

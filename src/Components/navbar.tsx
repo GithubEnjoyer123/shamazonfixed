@@ -1,6 +1,7 @@
 import "./navbar.css";
 import { useState } from "react";
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import {
   FaSearch,
   FaUserAlt,
@@ -8,14 +9,18 @@ import {
   FaBars,
   FaTimes,
 } from "react-icons/fa"; // Import icons from react-icons
-// Removed useNavigate from react-router-dom
 
 function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Setting the natural state of the hamburger menu to be false
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // Setting the initial state of the hamburger menu to be false
+  const navigate = useNavigate(); // Create navigate function to handle navigation
 
   const handleMenuToggle = () => {
     console.log(isMenuOpen);
     setIsMenuOpen(!isMenuOpen); // Toggle menu state
+  };
+
+  const handleUserIconClick = () => {
+    navigate("/login"); // Navigate to login page when user icon is clicked
   };
 
   return (
@@ -71,12 +76,8 @@ function Navbar() {
           </div>
 
           {/* User Icon */}
-          <button className="icon-button">
-            <a href="/login">
-              {" "}
-              {/* Replaced navigate with a regular link */}
-              <FaUserAlt />
-            </a>
+          <button className="icon-button" onClick={handleUserIconClick}>
+            <FaUserAlt />
           </button>
 
           {/* Cart Icon */}
