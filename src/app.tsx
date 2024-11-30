@@ -12,6 +12,8 @@ import SkincarePage from "./Components/SkincarePage"; // Import Skincare page co
 import SupplementsPage from "./Components/SupplementsPage"; // Import Skincare page component
 import ToysPage from "./Components/ToysPage"; // Import Skincare page component
 import ContactUsPage from "./Components/ContactUsPage"; // Import Contact Us page component
+import CatalogPage from "./Components/catalog"; // Import Catalog page component
+
 import "./app.css"; // Import styles
 
 function App() {
@@ -21,12 +23,19 @@ function App() {
       <div className="homePageContent">
         <Routes>
           <Route path="/" element={<HomePageContent />} /> {/* Home route */}
-          <Route path="/skincarePage" element={<SkincarePage />} /> {/* Skincare page route */}
-          <Route path="/supplementsPage" element={<SupplementsPage />} /> {/* Supplements page route */}
-          <Route path="/toysPage" element={<ToysPage />} /> {/* Toys page route */}    
-          <Route path="/contactUsPage" element={<ContactUsPage />} /> {/* Contact Us page route */}       
+          <Route path="/skincarePage" element={<SkincarePage />} />{" "}
+          {/* Skincare page route */}
+          <Route path="/supplementsPage" element={<SupplementsPage />} />{" "}
+          {/* Supplements page route */}
+          <Route path="/toysPage" element={<ToysPage />} />{" "}
+          {/* Toys page route */}
+          <Route path="/contactUsPage" element={<ContactUsPage />} />{" "}
+          {/* Contact Us page route */}
           {/* Add more routes as needed */}
-          <Route path="*" element={<Navigate to="/" />} /> {/* Redirect to home if route not found */}
+          <Route path="*" element={<Navigate to="/" />} />{" "}
+          {/* Redirect to home if route not found */}
+          <Route path="/catalogPage" element={<CatalogPage />} />{" "}
+          {/* Catalog page route */}
         </Routes>
       </div>
     </Router>
@@ -34,4 +43,3 @@ function App() {
 }
 
 export default App;
-
