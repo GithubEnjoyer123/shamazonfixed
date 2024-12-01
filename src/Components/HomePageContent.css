@@ -256,11 +256,13 @@ button {
   align-items: center;
   width: 100%;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 .footer-links a {
   margin-right: 20px;
   font-size: 14px;
+  align-items: center;
 }
 
 
