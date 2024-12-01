@@ -1,7 +1,6 @@
 import React from "react";
 import "./homePageContent.css";
 
-
 interface Product {
   image: string;
   name: string;
@@ -11,13 +10,14 @@ interface Product {
 
 const skincare: Product[] = [
   {
-    image: "/images/skincare1.jpg",
+    image:
+      "/src/assets/brickell_monthly_total_skincare_routine_001168126279716523.jpg.webp",
     name: "Hydrating Lotion",
     description: "Lightweight and moisturizing.",
     price: "$15",
   },
   {
-    image: "/images/skincare2.jpg",
+    image: "/src/assets/gh-best-skincare-products-6557978b58b57.png.avif",
     name: "Soothing Cream",
     description: "Calms and refreshes skin.",
     price: "$18",
