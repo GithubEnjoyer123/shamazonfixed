@@ -128,54 +128,101 @@
     display: flex;
     background-color: rgb(34, 37, 49);
   }
-  .ham-menu{
-    height: 50px;
-    width: 50px;
-    margin-left: auto;
-    position: relative;
-  }
-  .ham-menu span{
-    height: 5px;
-    width: 100%;
-    background-color: #6F86FF;
-    border-radius: 26px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: .3s ease;
-  }
-  .ham-menu span:nth-child(1){
-    top: 25%;
-  }
-  .ham-menu span:nth-child(3){
-    top: 75%;
-  }
-  .ham-menu.active span:nth-child(1){
-    top: 50%;
-    transform: translate(-50%, -50%); rotate: (45deg);
-  }
-  .ham-menu.active span:nth-child(2){
-    opacity: 0;
-  }
-  .ham-menu.active span:nth-child(3){
-    top: 50%;
-    transform: translate(-50%, -50%); rotate: (45deg);
-  }
   
-  .off-screen-menu ul {
-    list-style: none; /* Remove bullets from the list */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    left: -20px; /* Move the text 20px to the left */
-  top: -20px; /* Move the text 20px upwards */
+/* Hamburger menu container */
+.ham-menu {
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers the hamburger icon */
 }
-.off-screen-menu li{
-  margin: 30px 0; /* Adjust the vertical spacing between the menu items */
-    font-size: 2.2rem; /* Keep the current font size */
-    position: relative; /* This allows for absolute positioning of children elements */
-    left: -90px; /* Move the text 20px to the left */
-    top: -25vh; 
+
+/* Hamburger icon lines */
+.ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: #6F86FF;
+  border-radius: 26px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .3s ease;
+}
+
+/* Adjust the position of the hamburger lines */
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+
+/* Active state of the hamburger menu */
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Off-screen menu */
+.off-screen-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  left: 0; /* Centered menu */
+  top: 0; /* Centered vertically */
+  position: absolute;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center;
+  align-items: center; /* Center items horizontally */
+  height: 100vh; /* Full screen height for vertical centering */
+  width: 100%;
+  background-color: #fff; /* You can set a background color */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Style for each menu item */
+.off-screen-menu li {
+  margin: 20px 0; /* Reduced vertical spacing */
+  font-size: 1.6rem; /* Slightly smaller font size */
+  font-family: 'Arial', sans-serif; /* Apply a cleaner font */
+  font-weight: 500; /* Slightly bold */
+  text-transform: uppercase; /* Optional: capitalize text */
+  position: relative;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect on menu items */
+.off-screen-menu li:hover {
+  color: #6F86FF; /* Change text color on hover */
+}
+
+/* Optional: Centered menu on the screen */
+.off-screen-menu.active {
+  left: 0;
+  top: 0;
+  transform: translateX(0);
+}
+
+.off-screen-menu li a {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
 }
 
 

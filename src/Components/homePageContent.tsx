@@ -1,51 +1,40 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "./homePageContent.css";
+import { skincare, toys, supplements, Product } from "./productData";
 
-const HomePageContent: React.FC = () => {
-  const navigate = useNavigate(); // Use navigate hook to handle redirection
+const HomePage = () => {
+  const featuredProducts: Product[] = [
+    skincare[0], // First skincare product
+    toys[0],     // First toy product
+    supplements[0], // First supplement product
+  ];
 
-  // Handle Start Shopping button click to navigate to catalog page
-  const handleStartShoppingClick = () => {
-    navigate("/catalogPage");
+  const renderFeaturedProducts = (products: Product[]) => {
+    return products.map((product, index) => (
+      <div className="product-card" key={index}>
+        <img src={product.image} alt={product.name} className="product-image" />
+        <h3>{product.name}</h3>
+        <p>{product.description}</p>
+        <p className="product-price">{product.price}</p>
+        <button className="add-to-cart-button">Add to Cart</button>
+      </div>
+    ));
   };
 
   return (
     <div className="homepage">
       <header className="header">
         <div className="logo">Shamazon</div>
-        <nav className="nav">
-          {/* Placeholder for navigation links if needed */}
-        </nav>
+        <nav className="nav"></nav>
       </header>
 
-      <section className="hero">
-        <h1 className="hero-headline">Find the Best Deals, Fast</h1>
-        <p className="hero-subtitle">Your one-stop shop for everything</p>
-        <button className="cta-button" onClick={handleStartShoppingClick}>
-          Start Shopping
-        </button>
-      </section>
-
+      {/* Featured Products Section */}
       <section className="featured-products">
         <h2>Featured Products</h2>
-        <div className="product-grid">
-          <div className="product-card">Product 1</div>
-          <div className="product-card">Product 2</div>
-          <div className="product-card">Product 3</div>
-        </div>
+        <div className="product-grid">{renderFeaturedProducts(featuredProducts)}</div>
       </section>
 
-      <section className="arbitrage">
-        <h2>Compare Prices Instantly</h2>
-        <input
-          type="text"
-          placeholder="Search for a product..."
-          className="price-compare-input"
-        />
-        <button className="compare-button">Compare Prices</button>
-      </section>
-
+      {/* Footer */}
       <footer className="footer">
         <div className="footer-links">
           <a href="#privacy">Privacy Policy</a>
@@ -57,4 +46,5 @@ const HomePageContent: React.FC = () => {
   );
 };
 
-export default HomePageContent;
+export default HomePage;
+

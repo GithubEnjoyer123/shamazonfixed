@@ -1,6 +1,7 @@
 import React from "react";
 import "./homePageContent.css";
 
+
 interface Product {
   image: string;
   name: string;
