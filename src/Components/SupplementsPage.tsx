@@ -1,7 +1,43 @@
 import React from "react";
 import "./homePageContent.css";
 
+interface Product {
+  image: string;
+  name: string;
+  description: string;
+  price: string;
+}
+
+const supplements: Product[] = [
+  {
+    image:
+      "/src/assets/Dymatize-Elite-100-Whey-Protein-vanilla_c7e05213-58df-4bd8-bf3d-5aab4f41cb43.jpg.webp",
+    name: "Whey Protein",
+    description: "High-quality gym protein.",
+    price: "$30",
+  },
+  {
+    image:
+      "/src/assets/H6d5ffbbe058444bbb1c720aa27a61021A.jpg_300x300.jpg.avif",
+    name: "Creatine Powder",
+    description: "Boost strength and energy.",
+    price: "$25",
+  },
+];
+
 const SupplementsPage = () => {
+  const renderProducts = (products: Product[]) => {
+    return products.map((product, index) => (
+      <div className="product-card" key={index}>
+        <img src={product.image} alt={product.name} className="product-image" />
+        <h3>{product.name}</h3>
+        <p>{product.description}</p>
+        <p className="product-price">{product.price}</p>
+        <button className="add-to-cart-button">Add to Cart</button>
+      </div>
+    ));
+  };
+
   return (
     <div className="homepage">
       <header className="header">
@@ -11,19 +47,8 @@ const SupplementsPage = () => {
 
       {/* Featured Products Section */}
       <section className="featured-products">
-        <h2>Add Supplement Products</h2>
-        <div className="product-grid">
-          <div className="product-card">Product 1</div>
-          <div className="product-card">Product 2</div>
-          <div className="product-card">Product 3</div>
-        </div>
-      </section>
-
-      {/* Arbitrage Section */}
-      <section className="arbitrage">
-        <h2>Compare Prices Instantly</h2>
-        <input type="text" placeholder="Search for a product..." className="price-compare-input" />
-        <button className="compare-button">Compare Prices</button>
+        <h2>Supplement Products</h2>
+        <div className="product-grid">{renderProducts(supplements)}</div>
       </section>
 
       {/* Footer */}
