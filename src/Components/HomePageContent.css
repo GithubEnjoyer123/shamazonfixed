@@ -1,4 +1,35 @@
 /* General */
+.header {
+  display: flex; /* Aligns child elements (logo and nav) properly */
+  justify-content: space-between; /* Separates logo and nav */
+  align-items: center; /* Centers vertically */
+  background-color: #333; /* Matches your theme */
+  color: #fff;
+  padding: 1rem 2rem; /* Add consistent padding */
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem; /* Ensure text is legible */
+  height: auto; /* Adjusts dynamically to content */
+  position: relative; /* Avoid interference with fixed elements */
+  z-index: 1; /* Ensure it stays on top */
+}
+
+.homepage {
+  position: relative;
+  z-index: 0;
+}
+
+.logo {
+  font-size: 2rem; /* Make it prominent */
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase; 
+  margin: 0;
+  padding: 0;
+  flex-grow: 1; /* Allow it to take available space if needed */
+  overflow: visible; /* Prevent content cut-off */
+  align-items: center;
+}
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -17,6 +48,12 @@ button {
 }
 
 /* Navbar */
+.nav {
+  flex-grow: 0; /* Prevents it from stretching unnecessarily */
+  min-width: 0; /* Avoids taking unnecessary space */
+  height: auto; /* Adjusts to content if added later */
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -256,13 +293,11 @@ button {
   align-items: center;
   width: 100%;
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-
 }
 
 .footer-links a {
   margin-right: 20px;
   font-size: 14px;
-  align-items: center;
 }
 
 
