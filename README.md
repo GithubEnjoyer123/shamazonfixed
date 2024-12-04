@@ -32,7 +32,7 @@ git clone [repository URL]
 
 Navigate to the cloned folder in your terminal. The project folder is named ShamazonLaunch.
 
-2. Install Dependencies
+## Install Dependencies
 
 Once inside the project folder, you need to install the necessary packages. Run:
 
@@ -40,13 +40,13 @@ npm i
 
 This will install all the packages required to run the project.
 
-3. Install React Icons
+## Install React Icons
 
 The project uses icons from the React Icons library. To install React Icons, run:
 
 npm install react-icons
 
-4. Run the Development Server
+## Run the Development Server
 
 Now that everything is set up, run the development server by typing:
 
@@ -56,7 +56,7 @@ This will start a local server where you can preview the project.
 
 Once the server is up, you will see a localhost URL in the terminal (e.g., http://localhost:3000). Ctrl-click on this link to open it in your browser.
 
-5. Explore the Application
+## Explore the Application
 
 You can now browse the various pages such as the homepage, skincare products, supplements, toys, and contact pages.
 
