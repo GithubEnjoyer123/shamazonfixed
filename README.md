@@ -1,6 +1,6 @@
 ## Getting Started
 
-Shamazon Launch - Read Me
+Shamazonfixed - Read Me
 
 Introduction
 
@@ -20,7 +20,7 @@ Here's how to set up and run the Shamazon Launch project on your local machine. 
 
 Prerequisites
 
-Before you begin, make sure Node.js is installed on your computer. If it's not, you can download it here.
+Before you begin, make sure Node.js is installed on your computer. If it's not, you can download it here. https://nodejs.org/en/
 
 Steps to Run the Project Locally
 
@@ -30,13 +30,17 @@ Use Git to clone the repository to your desired folder. Run the command:
 
 git clone [repository URL]
 
-Navigate to the cloned folder in your terminal. The project folder is named ShamazonLaunch.
+web repository URL : https://github.com/GithubEnjoyer123/shamazonfixed.git
+
+" git clone https://github.com/GithubEnjoyer123/shamazonfixed.git "
+
+Navigate to the cloned folder in your terminal. The project folder is named Shamazonfixed.
 
 ## Install Dependencies
 
 Once inside the project folder, you need to install the necessary packages. Run:
 
-npm i
+`npm i`
 
 This will install all the packages required to run the project.
 
@@ -44,17 +48,17 @@ This will install all the packages required to run the project.
 
 The project uses icons from the React Icons library. To install React Icons, run:
 
-npm install react-icons
+`npm install react-icons`
 
 ## Run the Development Server
 
 Now that everything is set up, run the development server by typing:
 
-npm run dev
+`npm run dev`
 
 This will start a local server where you can preview the project.
 
-Once the server is up, you will see a localhost URL in the terminal (e.g., http://localhost:3000). Ctrl-click on this link to open it in your browser.
+Once the server is up, you will see a localhost URL in the terminal (e.g., http://localhost:3000). Ctrl-click (for windows OS) or Cmd-click (for mac OS) on this link to open it in your browser.
 
 ## Explore the Application
 
